@@ -22,44 +22,23 @@
                 </div>
             </div>
             <div class="tabs">
-                <a data-tab-id="importTab" data-toggle="tab" class="button tab active" data-hide-save="true">Import</a>
                 <a data-tab-id="exportTab" data-toggle="tab" class="button tab" data-bind="" data-hide-save="false">Export</a>
                 <a data-tab-id="downloadTab" data-toggle="tab" class="button tab" data-hide-save="false">Downloads</a>
-                <a data-tab-id="webLogsTab" data-toggle="tab" class="button tab" data-bind="" data-hide-save="true">Web Logs</a>
-                <a data-tab-id="closedHolidaysTab" data-toggle="tab" class="button tab" data-bind="" data-hide-save="true">Closed Holidays</a>
             </div>
-            <!--<ul class="nav navbar-nav">
-                <li style="float:left;" class="active"><a href="#">Import Location Details</a></li>
-                <li style="float:left;"><a href="#">Export Loc Details</a></li>
-                <li style="float:left;"><a href="#">Download</a></li>
-            </ul>-->
-            <!--a data-tab-id="importTab" data-toggle="tab" class="button tab active">Import</!--a>
                 <a data-tab-id="exportTab" data-toggle="tab" class="button tab">Export</a>
                 <a data-tab-id="downloadTab" data-toggle="tab" class="button tab" data-loadscript="refreshFileList()">Downloads</a>
-                <a data-tab-id="jobsTab" data-toggle="tab" class="button tab" data-loadscript="refreshJobs()">Jobs</a>
-                <a data-tab-id="logsTab" data-toggle="tab" class="button tab" data-loadscript="refreshJobHistory()">Job Logs</a-->
-
             <div class="tab-view">
-                <div id="importTab" class="tab-section">
-                    @{ Html.RenderPartial("_importView");}
-                </div>
                 <div id="exportTab" class="tab-section" style="display:none">
                     @{Html.RenderPartial("_exportView");}
                 </div>
                 <div id="downloadTab" class="tab-section" style="display:none;">
                     @{Html.RenderPartial("_downloadView");}
                 </div>
-                <div id="webLogsTab" class="tab-section" style="display:none;">
-
-                </div>
-                <div id="closedHolidaysTab" class="tab-section" style="display:none;">
-                    @{Html.RenderPartial("_closedHolidaysView");}
-                </div>
             </div>
             <form id="downloadForm" style="display:none;"></form>
             <div class="footer-actions">
 
-                <div class="branding-text">Developed by Volusion, Inc. All rights reserved.</div>
+                <div class="branding-text">Developed by Jonathan Portny. All rights reserved.</div>
                 <a class="button primary-action" id="saveBtn" style="display:none;" data-bind="click: save">Save</a>
             </div>
         </div>
