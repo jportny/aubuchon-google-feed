@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://50.206.125.135/WebService/xsd0.xsd" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://50.206.125.135/WebService/xsd1.xsd" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://50.206.125.135/WebService/xsd2.xsd" namespace="http://schemas.datacontract.org/2004/07/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService_GetCustomerRewardsPoints_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerRewardsPoints" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetCustomerRewardsPoints_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerRewardsPointsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddLoyaltyPoints_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddLoyaltyPoints" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddLoyaltyPoints_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddLoyaltyPointsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetCustomerPriceData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerPriceData" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetCustomerPriceData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerPriceDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetCustomerFull_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerFull" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetCustomerFull_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerFullResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_RequestReserveReward_InputMessage">
+    <wsdl:part name="parameters" element="tns:RequestReserveReward" />
+  </wsdl:message>
+  <wsdl:message name="IService_RequestReserveReward_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RequestReserveRewardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_RequestRedeemedReward_InputMessage">
+    <wsdl:part name="parameters" element="tns:RequestRedeemedReward" />
+  </wsdl:message>
+  <wsdl:message name="IService_RequestRedeemedReward_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RequestRedeemedRewardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_RequestCreateReward_InputMessage">
+    <wsdl:part name="parameters" element="tns:RequestCreateReward" />
+  </wsdl:message>
+  <wsdl:message name="IService_RequestCreateReward_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RequestCreateRewardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_CustomerAddUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:CustomerAddUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IService_CustomerAddUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CustomerAddUpdateResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService">
+    <wsdl:operation name="GetCustomerRewardsPoints">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetCustomerRewardsPoints" message="tns:IService_GetCustomerRewardsPoints_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetCustomerRewardsPointsResponse" message="tns:IService_GetCustomerRewardsPoints_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddLoyaltyPoints">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/AddLoyaltyPoints" message="tns:IService_AddLoyaltyPoints_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/AddLoyaltyPointsResponse" message="tns:IService_AddLoyaltyPoints_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerPriceData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetCustomerPriceData" message="tns:IService_GetCustomerPriceData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetCustomerPriceDataResponse" message="tns:IService_GetCustomerPriceData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerFull">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetCustomerFull" message="tns:IService_GetCustomerFull_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetCustomerFullResponse" message="tns:IService_GetCustomerFull_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestReserveReward">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/RequestReserveReward" message="tns:IService_RequestReserveReward_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/RequestReserveRewardResponse" message="tns:IService_RequestReserveReward_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestRedeemedReward">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/RequestRedeemedReward" message="tns:IService_RequestRedeemedReward_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/RequestRedeemedRewardResponse" message="tns:IService_RequestRedeemedReward_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestCreateReward">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/RequestCreateReward" message="tns:IService_RequestCreateReward_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/RequestCreateRewardResponse" message="tns:IService_RequestCreateReward_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CustomerAddUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/CustomerAddUpdate" message="tns:IService_CustomerAddUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/CustomerAddUpdateResponse" message="tns:IService_CustomerAddUpdate_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_IService" type="tns:IService">
+    <wsp:PolicyReference URI="#WSHttpBinding_IService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCustomerRewardsPoints">
+      <soap12:operation soapAction="http://tempuri.org/IService/GetCustomerRewardsPoints" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddLoyaltyPoints">
+      <soap12:operation soapAction="http://tempuri.org/IService/AddLoyaltyPoints" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerPriceData">
+      <soap12:operation soapAction="http://tempuri.org/IService/GetCustomerPriceData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerFull">
+      <soap12:operation soapAction="http://tempuri.org/IService/GetCustomerFull" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestReserveReward">
+      <soap12:operation soapAction="http://tempuri.org/IService/RequestReserveReward" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestRedeemedReward">
+      <soap12:operation soapAction="http://tempuri.org/IService/RequestRedeemedReward" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestCreateReward">
+      <soap12:operation soapAction="http://tempuri.org/IService/RequestCreateReward" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CustomerAddUpdate">
+      <soap12:operation soapAction="http://tempuri.org/IService/CustomerAddUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="WSHttpBinding_IService" binding="tns:WSHttpBinding_IService">
+      <soap12:address location="http://50.206.125.135/WebService/Service.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://50.206.125.135/WebService/Service.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Dns>localhost</Dns>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://soap.ws.jp.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="OrderHeaderService" targetNamespace="http://soap.ws.jp.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="https://aheis.jaggedpeak.com:443/webservices/soap/OrderHeaderService?xsd=1" namespace="http://soap.ws.jp.com/" />
+    </xsd:schema>
+  </types>
+  <message name="getOrderHeader">
+    <part name="parameters" element="tns:getOrderHeader" />
+  </message>
+  <message name="getOrderHeaderResponse">
+    <part name="parameters" element="tns:getOrderHeaderResponse" />
+  </message>
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
+  </message>
+  <message name="getOrderHeaderByRef">
+    <part name="parameters" element="tns:getOrderHeaderByRef" />
+  </message>
+  <message name="getOrderHeaderByRefResponse">
+    <part name="parameters" element="tns:getOrderHeaderByRefResponse" />
+  </message>
+  <message name="getOrderHeaders">
+    <part name="parameters" element="tns:getOrderHeaders" />
+  </message>
+  <message name="getOrderHeadersResponse">
+    <part name="parameters" element="tns:getOrderHeadersResponse" />
+  </message>
+  <portType name="OrderHeaderService">
+    <operation name="getOrderHeader">
+      <input wsam:Action="readOrderHeaderService" message="tns:getOrderHeader" />
+      <output wsam:Action="http://soap.ws.jp.com/OrderHeaderService/getOrderHeaderResponse" message="tns:getOrderHeaderResponse" />
+      <fault wsam:Action="http://soap.ws.jp.com/OrderHeaderService/getOrderHeader/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="getOrderHeaderByRef">
+      <input wsam:Action="readOrderHeaderService" message="tns:getOrderHeaderByRef" />
+      <output wsam:Action="http://soap.ws.jp.com/OrderHeaderService/getOrderHeaderByRefResponse" message="tns:getOrderHeaderByRefResponse" />
+      <fault wsam:Action="http://soap.ws.jp.com/OrderHeaderService/getOrderHeaderByRef/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="getOrderHeaders">
+      <input wsam:Action="readOrderHeaderService" message="tns:getOrderHeaders" />
+      <output wsam:Action="http://soap.ws.jp.com/OrderHeaderService/getOrderHeadersResponse" message="tns:getOrderHeadersResponse" />
+      <fault wsam:Action="http://soap.ws.jp.com/OrderHeaderService/getOrderHeaders/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+  </portType>
+  <binding name="OrderHeaderServicePortBinding" type="tns:OrderHeaderService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getOrderHeader">
+      <soap:operation soapAction="readOrderHeaderService" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getOrderHeaderByRef">
+      <soap:operation soapAction="readOrderHeaderService" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getOrderHeaders">
+      <soap:operation soapAction="readOrderHeaderService" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="OrderHeaderService">
+    <port name="OrderHeaderServicePort" binding="tns:OrderHeaderServicePortBinding">
+      <soap:address location="https://aheis.jaggedpeak.com:443/webservices/soap/OrderHeaderService" />
+    </port>
+  </service>
+</definitions>

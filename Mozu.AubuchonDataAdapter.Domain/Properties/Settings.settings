@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Mozu.AubuchonDataAdapter.Domain.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Mozu_AubuchonDataAdapter_Domain_CatalogImportService_catalogimport_wrapService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://ahotws.jaggedpeak.com/opentools/catalogimport.cfc</Value>
+    </Setting>
+    <Setting Name="Mozu_AubuchonDataAdapter_Domain_Jp_CustomerImportService_memberimport_wrapService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://ahotws.jaggedpeak.com/opentools/memberimport.cfc</Value>
+    </Setting>
+    <Setting Name="Mozu_AubuchonDataAdapter_Domain_FileUploadService_fileupload_wrapService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://ahotws.jaggedpeak.com/opentools/fileupload.cfc</Value>
+    </Setting>
+    <Setting Name="Mozu_AubuchonDataAdapter_Domain_InventoryImportService_inventoryimport_wrapService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://ahotws.jaggedpeak.com/opentools/inventoryimport.cfc</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

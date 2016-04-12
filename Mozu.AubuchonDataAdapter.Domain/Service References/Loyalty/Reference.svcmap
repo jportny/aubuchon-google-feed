@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fd964f90-84ca-4946-91d8-2d074777529c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>true</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://50.206.125.135/WebService/Service1.wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Service.wsdl" MetadataType="Wsdl" ID="0796015e-812b-48fe-baf8-e1e89abd0952" SourceId="1" SourceUrl="http://50.206.125.135/WebService/Service1.wsdl" />
+    <MetadataFile FileName="Service.xsd" MetadataType="Schema" ID="83c6acb3-359a-4003-92e3-c3cc2b8417fe" SourceId="1" SourceUrl="http://50.206.125.135/WebService/Service.svc?xsd=xsd2" />
+    <MetadataFile FileName="xsd0.xsd" MetadataType="Schema" ID="484f0b9b-c3fb-4659-b5d5-6f02a6c99885" SourceId="1" SourceUrl="http://50.206.125.135/WebService/xsd0.xsd" />
+    <MetadataFile FileName="xsd1.xsd" MetadataType="Schema" ID="edb89b50-b337-4c3f-ab3e-ecab47354f60" SourceId="1" SourceUrl="http://50.206.125.135/WebService/xsd1.xsd" />
+    <MetadataFile FileName="xsd2.xsd" MetadataType="Schema" ID="091f6bed-43b3-403b-acbd-ee2628c5e8ef" SourceId="1" SourceUrl="http://50.206.125.135/WebService/xsd2.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
