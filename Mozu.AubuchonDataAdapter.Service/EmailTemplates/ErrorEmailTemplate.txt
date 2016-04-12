@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>Title: Mozu Integration #{appName} Error </title>
+	</head>
+	<!-- Hotmail ignores some valid styling, so we have to add this -->
+	<style type="text/css">
+		#block-views-exp-search-page {display:none;}
+
+		/* Header Background Color = #333741 */
+
+		div, p, a, li, td { -webkit-text-size-adjust:none; }
+
+		.ReadMsgBody						{width: 100%; background-color: #e6e6e6;}
+		.ExternalClass						{width: 100%; background-color: #e6e6e6;}
+		body 								{width: 100%; background-color: #e6e6e6; margin:0; padding:0; -webkit-font-smoothing: antialiased;}
+		html 								{width: 100%; }
+
+		.headerImage img					{width: 100%; height: auto!important;}
+		.imageScale1 img					{width: 276px; height: auto!important; border-radius: 3px!important;}
+		.imageScale2 img					{width: 276px; height: auto!important; border-radius: 3px!important;}
+		.columnImageTableScale img 			{width: 175px; height: auto!important; border-radius: 3px!important;}
+		.table3Images img					{width: 175px; height: auto!important; border-radius: 3px!important;}
+        .ko-grid { margin-bottom: 1em; width: 25em; border: 1px solid silver; background-color:White; width: 100% }
+		.ko-grid th { text-align:left; background-color: Black; color:White; }
+		.ko-grid td, th { padding: 0.4em; }
+
+		@@media only screen and (max-width: 640px) 
+		{   
+			body							{width:auto!important;}
+			table table               		{width:100%!important; }
+			table[class=scaleForMobile]		{width: 100%!important; padding-left: 10px!important; padding-right: 10px!important;}
+			.fullWidth						{width: 100%!important;}
+			.mobileCenter					{width: 440px !important; text-align: center!important; }
+			.eraseForMobile					{width:0; display:none !important;}
+			.navPad							{margin-right: 35px!important; margin-left: 35px; font-size: 16px!important; }
+			.logo							{padding-bottom: 0px!important;}
+			.headerText						{text-align: center;}
+			.headerImage					{text-align: center!important; margin-top: 20px;}
+			.smallImages					{width: 280px!important; height: auto!important;}
+			.imageTopProcent1				{width: 50%!important;}
+			.imageTopProcent2				{width: 50%!important;}
+			.TextProcent					{width: 100%!important;}
+			.text							{font-size: 18px!important;}
+			.padProcentLeft					{width: 100%!important; padding-left: 10px!important; padding-right: 10px!important; text-align: left!important;}
+			.padProcentCenter				{padding-left: 20px!important; padding-right: 20px!important; text-align: center!important;}
+			.logoTop						{width: 280px!important; text-align: center!important;}
+			.columnScale					{width: 58%!important; padding-left: 10px!important;}
+			.columnImageScale				{width: 175px!important; margin-left: 20px!important;}
+			.columnImageTableScale			{width: 175px!important;}
+			.columnScale2					{width: 58%!important; padding-left: 10px!important; text-align: left!important;}
+			.columnImageScale2				{width: 175px!important; margin-right: 20px!important;}
+			.columnImageTableScale2			{width: 175px!important;}
+			.mobilePad5						{display: none;}
+			.pad25							{height: 0px!important;}
+			.pad5							{height: 10px!important;}
+			.erase440						{height: 0px!important;}
+			.footerScaleRight				{width: 100%!important; text-align: center!important;}
+			.FooterIconsScale				{width: 100%!important; text-align: center!important;}
+			.linePad						{width: 20px!important;}
+			.Footer3thColumn				{width: 31%!important;}
+			.FooterScale					{width: 100%!important; margin:0 auto!important; text-align: center!important; padding-left: 20px!important;}
+			.footerCenter					{text-align: right!important; padding-right: 20px!important;  }
+			.images3Scale 					{border:0!important;}
+			
+			table[class=imageScale1]		{width: 45%!important;}
+			table[class=imageScale2]		{width: 45%!important;}
+			img[class=imageScale1]			{width: 100%!important;}
+			img[class=imageScale2]			{width: 100%!important;}
+			.outlookpad						{width: 1px!important;}
+		}
+		
+		@@media only screen and (max-width: 479px) 
+		{
+			body							{width:auto!important;}
+			table table 					{width: 100%!important; }
+			table[class=scaleForMobile]		{width: 100%!important; padding-left: 10px!important; padding-right: 10px!important;}
+			.fullWidth						{width: 100%!important;}
+			.mobileCenter					{width:280px!important; text-align: center!important; }
+			.eraseForMobile					{width:0; display:none !important;}
+			.navPad							{margin-right: 12px!important; margin-left: 12px; font-size: 16px!important; }
+			.logo							{padding-bottom: 0px!important;}
+			.headerText						{text-align: center;}
+			.headerImage					{text-align: center!important; margin-top: 20px;}
+			.TextCenter						{text-align: left!important;}
+			.text							{font-size: 18px!important;}
+			.smallImages					{width: 280px!important; height: auto!important;}
+			.imageTopProcent1				{width: 100%!important; text-align: center!important; padding-left: 0px!important; }
+			.imageTopProcent2				{width: 100%!important; text-align: center!important; padding: 0px!important; }
+			.pad25							{height: 20px!important;}
+			.padProcentLeft					{width: 100%!important; padding-left: 10px!important; padding-right: 10px!important; text-align: center!important;}
+			.padProcentCenter				{padding-left: 20px!important; padding-right: 20px!important; text-align: center!important; font-size: 24px!important;
+			}
+			.logoTop						{width: 280px!important; text-align: center!important;}
+			.columnScale					{width: 100%!important; font-size: 18px!important; line-height: 28px!important; text-align: center!important; padding-left: 10px!important; padding-right: 10px!important;}
+			.columnImageScale				{width: 280px!important; height: auto!important; margin-left: 0px!important; margin-right: 0px!important; margin-bottom: 15px!important; text-align: center!important;}
+			.columnImageTableScale			{width: 100%!important; padding: 0px!important;}
+			.columnScale2					{width: 100%!important; text-align: center!important; padding-left: 10px!important; padding-right: 10px!important;}
+			.columnImageScale2				{width: 280px!important; height: auto!important; margin-left: 0px!important; margin-right: 0px!important; margin-bottom: 15px!important; text-align: center!important;}
+			.columnImageTableScale2			{width: 100%!important; padding: 0px!important;}
+			.pad5							{height: 25px!important;}
+			.erase440						{height: 35px!important;}
+			.footerScaleRight				{width: 100%!important; text-align: center!important;}
+			.FooterIconsScale				{width: 100%!important; text-align: center!important;}
+			.linePad						{width: 20px!important;}
+			.Footer3thColumn				{width: 100%!important; text-align: center!important; padding-top: 40px!important;}
+			.FooterScale					{width: 100%!important; text-align: center!important;}
+			.footerCenter					{text-align: center!important;}
+			.images3Scale 					{border:0!important;}
+			.columnScale5					{width: 100%!important; font-size: 24px!important; line-height: 34px!important; text-align: center!important; padding-left: 10px!important; padding-right: 10px!important;}
+
+			table[class=imageScale1]		{width: 100%!important;}
+			table[class=imageScale2]		{width: 100%!important;}
+			img[class=imageScale1]			{width: 280px!important; text-align: center!important;}
+			img[class=imageScale2]			{width: 280px!important; text-align: center!important;}
+			.outlookpad						{width: 1px!important;}
+		}
+	</style>
+	<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+		<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tbody>
+				<tr>
+					<td bgcolor="#ffffff" valign="top" width="100%">
+						<table align="center" border="0" cellpadding="0" cellspacing="0" class="fullWidth" width="100%">
+							<tbody>
+								<tr>
+									<td bgcolor="e6e6e6" class="fullWidth" width="100%">
+										<!-- Space -->
+										<table align="center" border="0" cellpadding="0" cellspacing="8" class="eraseForMobile" width="100%">
+											<tbody>
+												<tr>
+													<td height="0" width="600">&nbsp;</td>
+												</tr>
+											</tbody>
+										</table>
+										<!-- Start Nav -->
+                                        <table align="center" bgcolor="#333333" border="0" cellpadding="0" cellspacing="0" style="border-top: 5px solid #d2463c" width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="center" height="70" width="100%">
+                                                        <!-- Logo -->
+                                                        <table align="center" border="0" cellpadding="0" cellspacing="0" tralign="center">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="left" class="logoTop" valign="middle">
+                                                                        <a href="http://www.mozu.com"><img alt="Mozu" border="0" class="logo" height="32" src="http://a248.e.akamai.net/www.volusion.com/a1/i/email/mozutransactional/logo.png" valign="middle" width="141" /></a>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+										<!-- End Nav -->
+										<!-- Nav Mobile Wrapper -->
+										<table align="center" border="0" cellpadding="0" cellspacing="0" class="fullWidth" width="100%">
+											<tbody>
+												<tr>
+													<td background="images/bg3.png" bgcolor="#ffffff" class="fullWidth" style="background-repeat: repeat-x; background-position: center bottom;" valign="bottom" >
+														<!-- Start Header -->
+                                                        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td bgcolor="#ffffff" height="20" style="line-height: 1px;">&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="padProcentCenter" style="font-size: 14px; color: #686c75; text-align: left;  font-family: Helvetica, Arial, sans-serif; line-height: 20px;">
+                                                                        <p class="text">An Error Occured with #{appName}</p>
+
+                                                                        <p>&nbsp;</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <p><b>Message</b></p>
+																		#{message}
+                                                                    </td>
+                                                                </tr>
+																<tr>
+                                                                    <td>
+                                                                        <p><b>Context</b></p>
+																		#{context}
+                                                                    </td>
+                                                                </tr>
+																<tr>
+                                                                    <td>
+                                                                        <p><b>Exception</b></p>
+																		#{exception}
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+										<!-- End Mobile Wrapper -->
+										<!-- Done :) -->
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

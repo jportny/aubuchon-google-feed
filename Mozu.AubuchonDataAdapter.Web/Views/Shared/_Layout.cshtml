@@ -1,0 +1,29 @@
+﻿@*I don't know why this isn't being included inside the views web config*@
+@using System.Web.Optimization;   
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    @Styles.Render("~/Content/styles.css")
+    @Scripts.Render("~/Scripts/jquery-2.1.4.min.js")
+    @Scripts.Render("~/Scripts/knockout-3.3.0.js")
+    
+</head>
+<body>
+        @RenderBody()
+    
+    <script>
+        var baseUrl = '@VirtualPathUtility.ToAbsolute("~/")';
+    </script>
+    @RenderSection("scripts", required: false)
+
+    @Html.Hidden("tenantId", (Object)ViewBag.tenantId, new { id="hiddenTenantId" })
+    @Html.Hidden("selectedTab", (Object)ViewBag.selectedTab)
+    @Html.Hidden("cookieToken", (Object)ViewBag.cookieToken)
+    @Html.Hidden("formToken", (Object)ViewBag.formToken)
+    @Html.Hidden("hash", (Object)ViewBag.hash)
+</body>
+</html>

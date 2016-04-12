@@ -1,0 +1,19 @@
+﻿<h2 style="float:none;">Import Location Extras And Services</h2>
+<br/>
+<div class="form-inline">
+    <input type="text" data-bind="value: selectedFileName" placeholder="select import excel file" style="width: 300px;display:inline-block;" class="form-control" id="fileName" autocomplete="off">
+    <button onclick="$('input[id=locationfile]').click();" style="margin-bottom: 25px;" class="mz-button secondary">Browse</button>
+    <input type="file" data-bind="event: { change: function () { fileSelected($element.files[0]) } }" style="display:none;" name="file" id="locationfile">
+</div>
+
+<div class="row">
+    <div data-bind="visible: selectedImportType() != null">
+        <button id="import" class="mz-button primary">Import</button>
+    </div>
+</div>
+<script>
+
+    $(function () {
+
+    });
+</script>

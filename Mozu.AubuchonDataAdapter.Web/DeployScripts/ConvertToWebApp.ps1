@@ -1,0 +1,2 @@
+﻿New-WebVirtualDirectory -Site "Default Web Site" -Name "AubuchonAdapter" -PhysicalPath "$Env:systemdrive\inetpub\wwwroot\AubuchonAdapter"
+ConvertTo-WebApplication -PSPath "IIS:\Sites\Default Web Site\AubuchonAdapter"

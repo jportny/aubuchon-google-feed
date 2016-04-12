@@ -1,0 +1,11 @@
+version: 0.0
+os: windows
+files:
+  - source: \Mozu.AubuchonDataAdapter.Web\
+    destination: c:\inetpub\wwwroot\AubuchonAdapter
+hooks:
+  BeforeInstall:
+    - location: Mozu.AubuchonDataAdapter.Web/DeployScripts/BeforeInstall.bat
+  AfterInstall:
+    - location: Mozu.AubuchonDataAdapter.Web/DeployScripts/ConvertToWebApp.ps1
+      timeout: 180

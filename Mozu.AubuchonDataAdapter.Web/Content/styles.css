@@ -1,0 +1,511 @@
+﻿.tabs {
+    border-top: 1px solid #bfbfbf;
+    display: block;
+    float: left;
+    height: 100%;
+    margin-right: -1px;
+    position: relative;
+    width: 15%;
+    z-index: 0;
+}
+.tabs > a {
+    display:block;
+        
+}
+
+.tab-view {
+    border: 1px solid #bfbfbf;
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    height: 100%;
+    overflow: auto;
+    padding: 20px;
+    width: 85%;
+}
+    .tab-view > .tab-section {
+        min-height:150px;
+    }
+</style>
+<style>
+.masthead .mozulogo {
+    display: block;
+    height: 32px;
+    overflow: hidden;
+    position: relative;
+    width: 125px;
+}
+.mozulogo:after {
+    color: #d2463c;
+    content: "";
+    font-family: mozicons;
+    font-size: 20px;
+    font-weight: normal !important;
+    line-height: 1;
+    vertical-align: baseline;
+}
+.well .well-white {
+    background-color: #fff;
+    border-color: #fff;
+}
+.well-info {
+    border: 1px solid rgba(191, 191, 191, 1);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+    margin-bottom: 20px;
+    min-height: 20px;
+    padding: 40px;
+}
+.checkboxes input {
+    vertical-align: middle;
+}
+.checkboxes label span {
+    vertical-align: middle;
+}
+.field {
+    padding-bottom: 10px;
+}
+.text-error {
+    margin-top: -10px;
+}
+.table thead th {
+    background-color: #000;
+    color: #fff;
+}
+.notification {
+    border-radius: 2px;
+    color: rgba(255, 255, 255, 1);
+    font-family: "Source Sans Pro";
+    font-size: 14px;
+    line-height: 20px;
+    margin: 20px 0;
+    padding: 10px 30px 10px 10px;
+    position: relative;
+    text-align: left;
+}
+.notification a {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: underline;
+}
+.error {
+    background-color: rgba(210, 70, 60, 1);
+}
+.icon {
+    clear: right;
+    display: table-cell;
+    float: left;
+    height: 20px;
+    margin: 0 10px 0 0;
+    width: 20px;
+}
+.error .icon {
+    background: url("themes/base/images/icon_error.png") no-repeat scroll center center transparent;
+}
+.loadingicon {
+    background: url("themes/base/images/ajax-loader.gif") no-repeat scroll center center transparent;
+    height: 100%;
+    width: 100%;
+}
+.close {
+    background: url("themes/base/images/close-white.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    cursor: pointer;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 20px;
+}
+.message {
+    display: table-cell;
+    margin: 0;
+    padding: 0;
+}
+.success {
+    background-color: rgba(37, 174, 144, 1);
+}
+.success .icon {
+    background: url("themes/base/images/icon-success.png") no-repeat scroll center center transparent;
+}
+.icon_remove {
+    content: url("themes/base/images/icon_remove.png");
+}
+.mozu label {
+    color: rgba(51, 51, 51, 1);
+    display: block;
+    font-family: "Source Sans Pro";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+}
+.requiredContent:before {
+    color: red;
+    content: "* ";
+}
+html {
+    height: 100%;
+    width: 100%;
+}
+body {
+    color: #333;
+    font-family: 'Source Sans Pro',sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    height: 100%;
+    line-height: 20px;
+    margin: 0;
+    width: 100%;
+}
+h1 {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 44px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+h2 {
+    float: left;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+h3 {
+    float: left;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+h4 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+h5 {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+h6 {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+p {
+    margin-bottom: 5px;
+}
+.right {
+    text-align: right;
+}
+.button {
+    background-color: #000;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    padding: 4px 15px;
+    text-align: center;
+    text-decoration: none;
+}
+.button.tab {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #f2f2f2;
+    border-color: #bfbfbf;
+    border-image: none;
+    border-right: 1px solid #bfbfbf;
+    border-style: solid;
+    border-width: 0 1px 1px;
+    color: #333;
+    cursor: pointer;
+    font-weight: 400;
+    min-height: 20px;
+    padding: 5px;
+    text-align: left;
+    width: 100%;
+}
+.button.tab.active {
+    background-color: #fff;
+    border-right-color: #fff;
+    border-right-width: 1px;
+    border-top-width: 0;
+    color: #d2463c;
+}
+.button.tab:hover {
+    background-color: #e5e5e5;
+}
+.button.tab.active:hover {
+    background-color: inherit;
+}
+.button.primary-action {
+    background-color: #d2463c;
+    border: 1px solid #b83e35;
+    border-radius: 2px;
+    float: right;
+    height: 30px;
+    min-width: 70px;
+}
+.button.primary-action:hover {
+    background-color: #b83e35;
+}
+.app-container {
+    background-color: #fff;
+    box-sizing: border-box;
+    display: block;
+    height: 99%;
+    width: 100%;
+}
+.app {
+    height: 98%;
+    margin: auto;
+    width: 99%;
+}
+.header-actions {
+    clear: both;
+    float: left;
+    height: 8%;
+    width: 100%;
+}
+.tab-container {
+    clear: both;
+    float: left;
+    height: 87%;
+    width: 100%;
+}
+.help-icon {
+    display: block;
+}
+.tab-view {
+    border: 1px solid #bfbfbf;
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    height: 100%;
+    overflow: auto;
+    padding: 20px;
+    width: 85%;
+}
+.tab-view.config {
+    height: 100%;
+    width: 810px;
+}
+.tabs {
+    border-top: 1px solid #bfbfbf;
+    display: block;
+    float: left;
+    height: 100%;
+    margin-right: -1px;
+    position: relative;
+    width: 15%;
+    z-index: 0;
+}
+.help-icon-link {
+    float: right;
+    height: 15px;
+    margin-top: 10px;
+    width: 16px;
+}
+.footer-actions {
+    clear: both;
+    float: left;
+    height: 5%;
+    margin-top: 10px;
+    width: 100%;
+}
+.branding-text {
+    color: #999;
+    float: left;
+    font-size: 12px;
+    line-height: 10px;
+    margin-top: 10px;
+}
+.tab-divider {
+    border-top: 1px solid #bfbfbf;
+    clear: both;
+    float: left;
+    height: 0;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    width: 100%;
+}
+.tab-field {
+    border: 1px solid #bfbfbf;
+    border-radius: 2px;
+    box-sizing: border-box;
+    clear: both;
+    float: left;
+    font-weight: 400;
+    height: 25px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    width: 300px;
+}
+.tab-field.checkbox-field {
+    margin-bottom: 5px;
+    margin-left: 20px;
+}
+.tab-field-label {
+    clear: both;
+    float: left;
+    font-weight: 700;
+    margin-bottom: 5px;
+    width: 300px;
+}
+.right-align {
+    margin-top: 5px;
+    text-align: right;
+    width: 150px;
+}
+.row {
+    float: left;
+    min-width: 625px;
+    width: 100%;
+}
+.tab-full-column {
+    clear: both;
+    float: left;
+    width: 100%;
+}
+.tab-first-column {
+    clear: both;
+    float: left;
+    min-width: 300px;
+    width: 48%;
+}
+.column-right {
+    min-width: 150px;
+    width: 0;
+}
+.tab-second-column {
+    float: left;
+    margin-left: 4%;
+    min-width: 300px;
+    width: 48%;
+}
+.tab-checkbox-container {
+    clear: both;
+    float: left;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+.tab-checkbox-container.with-input {
+    margin-bottom: 0;
+}
+.tab-checkbox-label {
+    font-weight: 700;
+    padding-left: 5px;
+}
+.tab-checkbox-label-p {
+    box-sizing: border-box;
+    font-size: 12px;
+    line-height: 15px;
+    margin: 0;
+    max-width: 390px;
+    padding-left: 20px;
+}
+.tab-p {
+    float: left;
+    margin: 10px 0 20px;
+}
+.dropdown {
+    clear: left;
+    float: left;
+    height: 30px;
+    margin: 0 0 5px;
+    min-width: 300px;
+}
+.ko-grid {
+    background-color: #fff;
+    border: 1px solid silver;
+    margin-bottom: 1em;
+    width: 100%;
+}
+.ko-grid th {
+    background-color: #000;
+    color: #fff;
+    text-align: left;
+}
+.ko-grid td, th {
+    padding: 0.4em;
+}
+.ko-grid tr:nth-child(2n+1) {
+    background-color: #ddd;
+}
+.ko-grid-pageLinks {
+    margin-bottom: 1em;
+}
+.ko-grid-pageLinks a {
+    padding: 0.5em;
+}
+.ko-grid-pageLinks a.selected {
+    background-color: #000;
+    color: #fff;
+}
+.ko-link {
+    color: blue;
+    cursor: pointer;
+}
+.mz-button {
+    border-radius: 2px;
+    cursor: pointer;
+    font-family: 'Source Sans Pro',Verdana,Arial,sans-serif;
+    font-size: 16px;
+    height: 30px;
+    margin: 5px;
+    min-width: 70px;
+    padding: 3px 20px 5px;
+    text-align: center;
+}
+.mz-button:disabled {
+    cursor: default;
+    opacity: 0.4;
+}
+.mz-button.primary {
+    background-color: rgba(209, 69, 59, 1);
+    border: 1px solid rgba(158, 53, 46, 1);
+    color: rgba(255, 255, 255, 1);
+}
+.mz-button.primary:hover {
+    background-color: rgba(196, 66, 57, 1);
+    border: 1px solid rgba(145, 49, 42, 1);
+    box-shadow: 0 -1px 0 rgba(119, 21, 14, 1) inset;
+}
+.mz-button.primary:active {
+    background-color: rgba(145, 49, 42, 1);
+    box-shadow: 0 -1px 0 rgba(145, 49, 42, 1) inset;
+}
+.mz-button.primary:disabled:hover, .mz-button.primary:disabled:active {
+    background-color: rgba(209, 69, 59, 1);
+    border: 1px solid rgba(158, 53, 46, 1);
+    box-shadow: 0 0 0 inset;
+}
+.mz-button.secondary {
+    background-color: rgba(242, 242, 242, 1);
+    border: 1px solid rgba(191, 191, 191, 1);
+    color: rgba(51, 51, 51, 1);
+}
+.mz-button.secondary:hover {
+    background-color: rgba(230, 230, 230, 1);
+    box-shadow: 0 -1px 0 rgba(179, 179, 179, 1) inset;
+}
+.mz-button.secondary:active {
+    background-color: rgba(188, 188, 188, 1);
+    box-shadow: 0 -1px 0 rgba(179, 179, 179, 1) inset;
+}
+.mz-button.secondary:disabled:hover, .mz-button.secondary:disabled:active {
+    background-color: rgba(241, 241, 241, 1);
+    border: 1px solid rgba(191, 191, 191, 1);
+    box-shadow: 0 0 0 inset;
+}
+.text-center {
+    text-align: center;
+}

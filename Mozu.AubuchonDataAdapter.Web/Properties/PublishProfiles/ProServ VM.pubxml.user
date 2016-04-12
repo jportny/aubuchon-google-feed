@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>\\aus02ndpserv01\d$\Clients\Aubuchon\AubuchonDataAdapter</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="AppSettings.config">
+      <publishTime>10/09/2015 16:16:09</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>07/08/2015 04:41:23</publishTime>
+    </File>
+    <File Include="bin/Autofac.dll">
+      <publishTime>07/01/2015 14:44:36</publishTime>
+    </File>
+    <File Include="bin/Autofac.Integration.Mvc.dll">
+      <publishTime>07/01/2015 14:44:36</publishTime>
+    </File>
+    <File Include="bin/Autofac.Integration.WebApi.dll">
+      <publishTime>07/01/2015 14:44:36</publishTime>
+    </File>
+    <File Include="bin/Common.Logging.dll">
+      <publishTime>07/01/2015 14:44:38</publishTime>
+    </File>
+    <File Include="bin/EmailTemplates/ErrorEmailTemplate.txt">
+      <publishTime>06/24/2015 05:26:14</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>07/01/2015 14:44:38</publishTime>
+    </File>
+    <File Include="bin/EPPlus.dll">
+      <publishTime>07/01/2015 14:44:39</publishTime>
+    </File>
+    <File Include="bin/Handlers/Excel/Templates/locationservicesheaders.json">
+      <publishTime>07/01/2015 04:15:11</publishTime>
+    </File>
+    <File Include="bin/log4net.config">
+      <publishTime>09/14/2015 17:07:53</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>07/01/2015 14:44:36</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>07/08/2013 20:15:08</publishTime>
+    </File>
+    <File Include="bin/Mozu.Api.dll">
+      <publishTime>07/15/2015 22:43:57</publishTime>
+    </File>
+    <File Include="bin/Mozu.Api.ToolKit.dll">
+      <publishTime>07/01/2015 14:44:37</publishTime>
+    </File>
+    <File Include="bin/Mozu.Api.WebToolKit.dll">
+      <publishTime>07/01/2015 14:44:37</publishTime>
+    </File>
+    <File Include="bin/Mozu.AubuchonDataAdapter.Domain.dll">
+      <publishTime>10/09/2015 16:11:10</publishTime>
+    </File>
+    <File Include="bin/Mozu.AubuchonDataAdapter.Domain.dll.config">
+      <publishTime>08/10/2015 20:53:35</publishTime>
+    </File>
+    <File Include="bin/Mozu.AubuchonDataAdapter.Domain.XmlSerializers.dll">
+      <publishTime>10/09/2015 16:11:11</publishTime>
+    </File>
+    <File Include="bin/Mozu.AubuchonDataAdapter.Service.exe">
+      <publishTime>10/09/2015 16:11:12</publishTime>
+    </File>
+    <File Include="bin/Mozu.AubuchonDataAdapter.Web.dll">
+      <publishTime>10/09/2015 16:16:08</publishTime>
+    </File>
+    <File Include="bin/Mozu.Integration.Scheduler.dll">
+      <publishTime>07/01/2015 14:44:39</publishTime>
+    </File>
+    <File Include="bin/Mozu.Integration.Scheduler.dll.config">
+      <publishTime>07/01/2015 14:44:39</publishTime>
+    </File>
+    <File Include="bin/MySql.Data.dll">
+      <publishTime>07/01/2015 14:44:37</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>07/01/2015 14:44:38</publishTime>
+    </File>
+    <File Include="bin/packages.config">
+      <publishTime>07/17/2015 19:44:43</publishTime>
+    </File>
+    <File Include="bin/Quartz.dll">
+      <publishTime>07/01/2015 14:44:39</publishTime>
+    </File>
+    <File Include="bin/quartz_jobs.xml">
+      <publishTime>06/19/2015 17:43:37</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>07/01/2015 14:44:37</publishTime>
+    </File>
+    <File Include="bin/System.Web.Cors.dll">
+      <publishTime>07/01/2015 14:44:36</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>07/01/2015 14:44:37</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.Cors.dll">
+      <publishTime>07/01/2015 14:44:37</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>07/01/2015 14:44:37</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>07/01/2015 14:44:37</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>07/01/2015 14:44:36</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>07/08/2015 04:41:23</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>07/01/2015 14:44:37</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>07/01/2015 14:44:37</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>07/01/2015 14:44:37</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>07/01/2015 14:44:37</publishTime>
+    </File>
+    <File Include="bin/Topshelf.dll">
+      <publishTime>07/01/2015 14:44:40</publishTime>
+    </File>
+    <File Include="bin/Topshelf.Log4Net.dll">
+      <publishTime>07/01/2015 14:44:40</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>07/08/2015 04:41:27</publishTime>
+    </File>
+    <File Include="bin/WinSCP.exe">
+      <publishTime>06/19/2015 17:43:37</publishTime>
+    </File>
+    <File Include="bin/WinSCPnet.dll">
+      <publishTime>07/01/2015 14:44:40</publishTime>
+    </File>
+    <File Include="Content/styles.css">
+      <publishTime>07/01/2015 04:15:11</publishTime>
+    </File>
+    <File Include="EmailTemplates/ErrorEmailTemplate.txt">
+      <publishTime>06/24/2015 05:26:14</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>02/09/2015 16:06:34</publishTime>
+    </File>
+    <File Include="log4net.config">
+      <publishTime>07/17/2015 20:36:05</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>09/02/2015 19:14:54</publishTime>
+    </File>
+    <File Include="Properties/SlowCheetah/SlowCheetah.Transforms.targets">
+      <publishTime>08/11/2015 22:00:21</publishTime>
+    </File>
+    <File Include="Scripts/home.js">
+      <publishTime>07/16/2015 22:09:46</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.1.4.js">
+      <publishTime>07/06/2015 21:58:17</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.1.4.min.js">
+      <publishTime>07/01/2015 04:15:11</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.1.4.min.map">
+      <publishTime>07/01/2015 04:15:11</publishTime>
+    </File>
+    <File Include="Scripts/knockout-3.3.0.debug.js">
+      <publishTime>07/06/2015 21:58:17</publishTime>
+    </File>
+    <File Include="Scripts/knockout-3.3.0.js">
+      <publishTime>07/01/2015 04:15:12</publishTime>
+    </File>
+    <File Include="Scripts/react/JSXTransformer-0.13.1.js">
+      <publishTime>09/02/2015 17:14:48</publishTime>
+    </File>
+    <File Include="Scripts/react/react-0.13.1.js">
+      <publishTime>09/02/2015 17:14:48</publishTime>
+    </File>
+    <File Include="Scripts/react/react-0.13.1.min.js">
+      <publishTime>09/02/2015 17:14:47</publishTime>
+    </File>
+    <File Include="Scripts/react/react-with-addons-0.13.1.js">
+      <publishTime>09/02/2015 17:14:45</publishTime>
+    </File>
+    <File Include="Scripts/react/react-with-addons-0.13.1.min.js">
+      <publishTime>09/02/2015 17:14:45</publishTime>
+    </File>
+    <File Include="Scripts/_reference.js">
+      <publishTime>07/01/2015 04:15:11</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>07/16/2015 22:09:46</publishTime>
+    </File>
+    <File Include="Views/Home/_closedHolidaysView.cshtml">
+      <publishTime>07/16/2015 22:09:46</publishTime>
+    </File>
+    <File Include="Views/Home/_downloadView.cshtml">
+      <publishTime>07/01/2015 04:15:12</publishTime>
+    </File>
+    <File Include="Views/Home/_exportView.cshtml">
+      <publishTime>07/01/2015 04:15:12</publishTime>
+    </File>
+    <File Include="Views/Home/_importView.cshtml">
+      <publishTime>07/01/2015 04:15:12</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>11/19/2014 08:17:00</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>07/01/2015 04:15:12</publishTime>
+    </File>
+    <File Include="Views/web.config">
+      <publishTime>07/01/2015 04:15:12</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>11/19/2014 08:17:00</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>10/09/2015 16:16:08</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

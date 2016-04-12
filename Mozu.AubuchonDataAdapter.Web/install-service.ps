@@ -1,0 +1,35 @@
+﻿# This Powershell script is used to backup a SQL Server database and move the backup file to S3
+# It can be run as a scheduled task like this:
+# C:\WINDOWS\system32\WindowsPowerShell\v1.0\powershell.exe &'C:\Path\dbbackup.ps1'
+# Written by Michael Friis (http://friism.com)
+
+$key = "yourkey"
+$secret = "yoursecret"
+$localfolder = "C:\path\tobackupfolder"
+$s3folder = "somebucket/backup/"
+$name = Get-Date -uformat "backup_%Y_%m_%d"
+$filename = $name + ".bak"
+$zipfilename = $name + ".zip"
+$dbname = "yourdb"
+$dblogname = "yourdb_log"
+$ziplibloc = "C:\pathto\ziplib\Ionic.Utils.Zip.dll"
+
+# Remove existing db backup file
+if(Test-Path -path ($localfolder + "\" + $filename)) { Remove-Item ($localfolder + "\" + $filename) }
+
+
+# Remove existing zip file
+if(Test-Path -path ($localfolder + "\" + $zipfilename)) { Remove-Item ($localfolder + "\" + $zipfilename) }
+
+#Zip the backup file
+[System.Reflection.Assembly]::LoadFrom($ziplibloc);
+$zipfile =  new-object Ionic.Utils.Zip.ZipFile($localfolder + "\" + $zipfilename);
+$e= $zipfile.AddFile($localfolder + "\" + $filename)
+$zipfile.Save()
+
+#Upload to S3
+Add-PSSnapin CloudBerryLab.Explorer.PSSnapIn
+$s3 = Get-CloudS3Connection -Key $key -Secret $secret
+$destination = $s3 | Select-CloudFolder -path $s3folder
+$src = Get-CloudFilesystemConnection | Select-CloudFolder $localfolder
+$src | Copy-CloudItem $destination –filter $zipfilename
